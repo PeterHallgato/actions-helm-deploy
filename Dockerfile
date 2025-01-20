@@ -5,7 +5,7 @@ ENV HELM_VERSION v3.17.0
 RUN apk add --no-cache ca-certificates curl tar bash
 
 RUN set -ex \
-    && curl -sSL https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz | tar xz \
+    && curl -sSL https://repo.huaweicloud.com/helm/${HELM_VERSION}/helm-${HELM_VERSION}-linux-amd64.tar.gz | tar xz \
     && mv linux-amd64/helm /usr/local/bin/helm \
     && rm -rf linux-amd64
 
